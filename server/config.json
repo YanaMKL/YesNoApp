@@ -1,0 +1,21 @@
+{
+    "giphy_api_key": "YOUR_API_KEY",
+    "port": 3000,
+    "terms": {
+        "yes": [
+            "Yes",
+            "Yep",
+            "Oh Yes",
+            "Sure!",
+            "Oh Yea",
+            "Of Course"
+        ],
+        "no": [
+            "No",
+            "No Way",
+            "Damn Shit Not",
+            "Never",
+            "Noooo!"
+        ]
+    }
+}
