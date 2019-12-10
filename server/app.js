@@ -51,6 +51,67 @@ server.get('/api', (req, res) => {
      });
 });
 
+server.get('/yes', (req, res) => {
+
+  var yesOrNo = 'yes';
+  var api_url = `http://api.giphy.com/v1/gifs/random?api_key=${config.giphy_api_key}&limit=1&tag=${yesOrNo}`;
+  var text;
+  
+   request(api_url, (err, response, body) => {
+       
+          
+     if(err)
+       return res.status(500).send({message: err});
+     else {
+
+      //  Parse Giphy Response
+      let giphyResponse = JSON.parse(body); 
+
+        //  Randomize "Yes" text
+        text = config.terms[yesOrNo][ Math.floor(Math.random() * config.terms[yesOrNo].length) ]
+
+        //  Return JSON
+        return res.send({
+          answer: yesOrNo,
+          text: text,
+          image: giphyResponse.data.image_original_url
+        })
+       }
+
+   });  
+  
+});
+
+server.get('/no', (req, res) => {
+
+  var yesOrNo = 'no';
+  var api_url = `http://api.giphy.com/v1/gifs/random?api_key=${config.giphy_api_key}&limit=1&tag=${yesOrNo}`;
+  var text;
+  
+   request(api_url, (err, response, body) => {
+       
+          
+     if(err)
+       return res.status(500).send({message: err});
+     else {
+
+      //  Parse Giphy Response
+      let giphyResponse = JSON.parse(body); 
+
+        //  Randomize "No" text
+        text = config.terms[yesOrNo][ Math.floor(Math.random() * config.terms[yesOrNo].length) ]
+
+        //  Return JSON
+        return res.send({
+          answer: yesOrNo,
+          text: text,
+          image: giphyResponse.data.image_original_url
+        })
+       }
+
+   });  
+  
+});
 
 //start server
 server.listen(config.port, function(){
