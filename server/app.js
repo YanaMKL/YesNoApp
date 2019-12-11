@@ -113,7 +113,7 @@ server.get('/no', (req, res) => {
   
 });
 
-//start server
+// start server
 server.listen(config.port, function(){
 
   console.log(' new server started on port 3000 ...');
