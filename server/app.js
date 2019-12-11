@@ -50,7 +50,7 @@ server.get('/api', (req, res) => {
 
      });
 });
-
+///
 server.get('/yes', (req, res) => {
 
   var yesOrNo = 'yes';
