@@ -8,7 +8,7 @@ var cors      = require('cors');
 const config = JSON.parse(fs.readFileSync('config.json'));
 
 
-//  Start Server
+//  Create Server
 const server = express();
 
 //  Allow CORS
