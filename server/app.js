@@ -8,7 +8,7 @@ var cors      = require('cors');
 const config = JSON.parse(fs.readFileSync(path.resolve(__dirname,'config.json')));
 
 //  Set default server port
-config.port = process.env.port || config.port;
+config.port = process.env.PORT || config.port;
 
 
 //  Create Server
