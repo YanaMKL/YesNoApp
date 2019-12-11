@@ -1,5 +1,5 @@
 {
-    "giphy_api_key": "qBMWHBG3PDmVRLcyYb5onv0Qm8QCUYze",
+    "giphy_api_key": "YOUR_API_KEY",
     "port": 3000,
     "terms": {
         "yes": [
