@@ -7,6 +7,9 @@ var cors      = require('cors');
 //  Load Config File
 const config = JSON.parse(fs.readFileSync('config.json'));
 
+//  Set default server port
+config.port = process.env.port || config.port;
+
 
 //  Create Server
 const server = express();
