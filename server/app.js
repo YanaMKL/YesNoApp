@@ -18,7 +18,8 @@ const server = express();
 server.use(cors())
 
 //  Set public directory for static HTML
-server.use(express.static(path.join(__dirname, '../public')))
+server.use(express.static(path.join(__dirname, '../public')));
+server.use('/yes', express.static(path.join(__dirname, '../public')));
 
 
 //  Routes
@@ -80,7 +81,7 @@ server.get('/yes', (req, res) => {
           image: giphyResponse.data.image_original_url
         })
        }
-
+      
    });  
   
 });
