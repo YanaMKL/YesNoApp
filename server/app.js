@@ -18,7 +18,13 @@ const server = express();
 server.use(cors())
 
 //  Set public directory for static HTML
+<<<<<<< Updated upstream
 server.use(express.static(path.join(__dirname, '../public')))
+=======
+server.use(express.static(path.join(__dirname, '../public')));
+server.use('/yes', express.static(path.join(__dirname, '../public')));
+server.use('/no', express.static(path.join(__dirname, '../public')));
+>>>>>>> Stashed changes
 
 
 //  Routes
