@@ -12,14 +12,25 @@
 
 <body>
   
-   <div class="container">
-      <div id="app">
-          <img id="theImage">
+   <div class="wrapper">
+      <div id="app" >
+        <img id="theImage" class=”page-header-image”>
+        <div id="logo"></div>  
+        <div id="share-buttons"> 
+            <!--Facebook-->  
+            <a href="https://www.facebook.com/sharer.php?u=https://frinmash.blogspot.com" target="_blank">
+                <img src="https://4.bp.blogspot.com/-raFYZvIFUV0/UwNI2ek6i3I/AAAAAAAAGSA/zs-kwq0q58E/s1600/facebook.png" alt="Facebook" />
+            </a>
+            <!--LinkedIn--> 
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://frinmash.blogspot.com" target="_blank"><img src="https://2.bp.blogspot.com/-3_cATk7Wlho/UwNI3eoTTLI/AAAAAAAAGSQ/Y8cpq6S-SeQ/s1600/linkedin.png" alt="LinkedIn" />
+            </a>
+            <!--Whatsapp-->
+            <a href="https://api.whatsapp.com/send?text='https://yesno-app.herokuapp.com'" target="_blank"><i style="font-size:70px; color: green" class="fa">&#xf232;</i></a>
+        </div>       
       </div>
-      <div class="sharethis-inline-share-buttons"></div>
-      <div id="logo">KENLO</div>
     </div>
-    
+
+
     <script type="text/javascript" src="assets/js/main.js"></script>
     
     <!-- jQuery library -->
@@ -31,5 +42,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>  
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </body>
 </html>
