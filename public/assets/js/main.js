@@ -1,5 +1,9 @@
 (function(){
 
+
+    if(api_url === 'xxx')
+        api_url = '/api';    
+
     var ajax = new XMLHttpRequest();
     
     ajax.onreadystatechange = function() {
@@ -12,7 +16,7 @@
         }
     };
     
-    ajax.open('GET', '/api', true);
+    ajax.open('GET', api_url, true);
     ajax.send(null);
 
 })()

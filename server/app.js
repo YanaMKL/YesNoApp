@@ -18,8 +18,12 @@ const server = express();
 server.use(cors())
 
 //  Set public directory for static HTML
+<<<<<<< Updated upstream
 server.use(express.static(path.join(__dirname, '../public')))
 
+=======
+server.use(express.static(path.join(__dirname, '../public')));
+>>>>>>> Stashed changes
 
 //  Routes
 server.get('/api', (req, res) => {
@@ -54,7 +58,7 @@ server.get('/api', (req, res) => {
      });
 });
 
-server.get('/yes', (req, res) => {
+server.get('/api/yes', (req, res) => {
 
   var yesOrNo = 'yes';
   var api_url = `http://api.giphy.com/v1/gifs/random?api_key=${config.giphy_api_key}&limit=1&tag=${yesOrNo}`;
@@ -85,7 +89,7 @@ server.get('/yes', (req, res) => {
   
 });
 
-server.get('/no', (req, res) => {
+server.get('/api/no', (req, res) => {
 
   var yesOrNo = 'no';
   var api_url = `http://api.giphy.com/v1/gifs/random?api_key=${config.giphy_api_key}&limit=1&tag=${yesOrNo}`;
@@ -114,6 +118,28 @@ server.get('/no', (req, res) => {
 
    });  
   
+});
+
+server.get('/yes', (req, res) => {
+
+    let html = fs.readFileSync(path.resolve(__dirname,'../public/index.html')).toString();
+    res.set('Content-Type', 'text/html')
+
+    html = html.replace('xxx','/api/yes');
+
+    res.send(html);
+
+});
+
+server.get('/no', (req, res) => {
+
+  let html = fs.readFileSync(path.resolve(__dirname,'../public/index.html')).toString();
+  res.set('Content-Type', 'text/html')
+
+  html = html.replace('xxx','/api/no');
+
+  res.send(html);
+
 });
 
 // start server
